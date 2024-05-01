@@ -47,11 +47,6 @@ vim.o.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
-vim.opt.list = true
-
 -- Set colorscheme
 vim.o.termguicolors = true
 
