@@ -123,10 +123,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 vim.opt.fillchars = { eob = " " }
 
--- swap the current line with the line above it
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move the current line down" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move the current line up" })
+-- swap lines just like in vscode, alt + up or down
+vim.keymap.set("n", "<C-J>", ":m .+1<CR>==", { desc = "Move the current line down" })
+vim.keymap.set("n", "<C-K>", ":m .-2<CR>==", { desc = "Move the current line up" })
 
--- move lines in visual mode
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv-gv", { desc = "Move the selected lines down" })
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv-gv", { desc = "Move the selected lines up" })
+-- move lines up and down
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move the selected lines down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move the selected lines up" })
