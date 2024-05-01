@@ -123,5 +123,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 vim.opt.fillchars = { eob = " " }
 
--- C-v should use visual-block mode
-vim.keymap.set("n", "<C-v>", "<C-v>", { noremap = true })
+-- swap the current line with the line above it
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move the current line down" })
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move the current line up" })
+
+-- move lines in visual mode
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv-gv", { desc = "Move the selected lines down" })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv-gv", { desc = "Move the selected lines up" })
