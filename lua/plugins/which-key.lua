@@ -12,7 +12,11 @@ return { -- Useful plugin to show you pending keybinds.
 			["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
 			["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
 			["<leader>t"] = { name = "[T]oggle", _ = "which_key_ignore" },
-			["<leader>g"] = { name = "[G]t Hunk", _ = "which_key_ignore" },
+			["<leader>g"] = { name = "[G]it Hunk", _ = "which_key_ignore" },
+			["<leader>b"] = { name = "[B]buffer", _ = "which_key_ignore" },
+			["<leader>q"] = { name = "[Q]uit", _ = "which_key_ignore" },
+			["<leader>h"] = { name = "[H]aproon", _ = "which_key_ignore" },
+			["<leader>f"] = { name = "[F]ile", _ = "which_key_ignore" },
 			["<leader>1"] = "which_key_ignore",
 			["<leader>2"] = "which_key_ignore",
 			["<leader>3"] = "which_key_ignore",
@@ -21,7 +25,7 @@ return { -- Useful plugin to show you pending keybinds.
 		})
 		-- visual mode
 		require("which-key").register({
-			["<leader>h"] = { "Git [H]unk" },
+			["<leader>gh"] = { "Git [H]unk" },
 		}, { mode = "v" })
 	end,
 }
