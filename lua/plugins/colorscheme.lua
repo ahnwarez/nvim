@@ -13,12 +13,12 @@ local function vscode_config()
 			WinBar = { bg = nil },
 
 			["@keyword"] = { fg = colors.vscPink, bg = "NONE" },
-			["typescriptBraces"] = { fg = colors.vscYellow, bg = "NONE" },
 			["@punctuation.bracket"] = { fg = "#ffcc00", bg = "NONE" },
+			["@punctuation.special"] = { fg = "#ffcc00", bg = "NONE" },
+			["typescriptVariableDeclaration"] = { fg = colors.vscBlue, bg = "NONE" },
 		},
 	})
 	vscode.load()
-	local colors = require("vscode.colors")
 	vim.api.nvim_set_hl(0, "NeoTreeFileNameOpened", {
 		bg = colors.vscSelection,
 		fg = colors.vscBack,
