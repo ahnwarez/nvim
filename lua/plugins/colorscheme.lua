@@ -12,10 +12,37 @@ local function vscode_config()
 			-- CursorLine = { underline = true },
 			WinBar = { bg = nil },
 
+			-- set the color for `export`
 			["@keyword"] = { fg = colors.vscPink, bg = "NONE" },
+			-- set the color for `{}`
 			["@punctuation.bracket"] = { fg = "#ffcc00", bg = "NONE" },
+			["@punctuation.bracket.tsx"] = { fg = colors.vscPink , bg = "NONE" },
+			["@operator.tsx"] = { fg = "#ffcc00" , bg = "NONE" },
+			-- set the color for `[]`
 			["@punctuation.special"] = { fg = "#ffcc00", bg = "NONE" },
-			["typescriptVariableDeclaration"] = { fg = colors.vscBlue, bg = "NONE" },
+			["@lsp.typemod.variable.constant"] = { fg = colors.vscAccentBlue, bg = "NONE" },
+			-- set the color for `const`
+			["@keyword.javascript"] = { fg = colors.vscBlue, bg = "NONE" },
+			["@keyword.typescript"] = { fg = colors.vscBlue, bg = "NONE" },
+
+			["@type.tsx"] = { fg = colors.vscLightBlue, bg = "NONE" },
+			["@operator.tsx"] = { fg = colors.vscBlue, bg = "NONE" },
+
+			-- `:` in `key: value`
+			["@punctuation.delimiter.tsx"] = { fg = colors.vscLightBlue, bg = "NONE" },
+
+			-- `<Tag />`
+			["@tag.tsx"] = { fg = colors.vscBlueGreen, bg = "NONE" },
+			["@tag"] = { fg = colors.vscBlueGreen, bg = "NONE" },
+		
+			-- `obj.value`
+			["@lsp.type.namespace.typescriptreact"] = { fg = colors.vscBlueGreen, bg = "NONE" },
+
+			-- `function`
+			["@keyword.function.typescript"] = { fg = colors.vscBlue, bg = "NONE" },
+		
+			-- `async funcion`
+			["@keyword.coroutine.typescript"] = { fg = colors.vscBlue, bg = "NONE" },
 		},
 	})
 	vscode.load()
