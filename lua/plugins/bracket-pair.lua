@@ -1,3 +1,3 @@
 return {
-	"fedepujol/bracketpair.nvim",
+	"HiPhish/rainbow-delimiters.nvim",
 }
