@@ -130,3 +130,6 @@ vim.keymap.set("n", "<C-K>", ":m .-2<CR>==", { desc = "Move the current line up"
 -- move lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move the selected lines down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move the selected lines up" })
+
+-- inspect
+vim.keymap.set("n", "<leader>ii", "<cmd>Inspect<CR>")
