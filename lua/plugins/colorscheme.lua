@@ -34,7 +34,9 @@ local function vscode_config()
 
 			-- `<Tag />`
 			["@tag.tsx"] = { fg = colors.vscBlueGreen, bg = "NONE" },
-			["@tag"] = { fg = colors.vscBlueGreen, bg = "NONE" },
+			["@tag"] = { fg = colors.vscBlue, bg = "NONE" },
+			["@tag.javascript"] = { fg = colors.vscBlueGreen, bg = "NONE" },
+			["@tag.typescript"] = { fg = colors.vscBlueGreen, bg = "NONE" },
 
 			-- `obj.value`
 			["@lsp.type.namespace.typescriptreact"] = { fg = colors.vscBlueGreen, bg = "NONE" },
