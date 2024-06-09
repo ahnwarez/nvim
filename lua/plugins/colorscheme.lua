@@ -16,7 +16,7 @@ local function vscode_config()
 			["@keyword"] = { fg = colors.vscPink, bg = "NONE" },
 			-- set the color for `{}`
 			["@punctuation.bracket"] = { fg = "#ffcc00", bg = "NONE" },
-			["@punctuation.bracket.tsx"] = { fg = colors.vscPink, bg = "NONE" },
+			["@punctuation.bracket.tsx"] = { fg = "#ffcc00", bg = "NONE" },
 
 			-- set the color for `[]`
 			["@punctuation.special"] = { fg = "#ffcc00", bg = "NONE" },
@@ -37,21 +37,26 @@ local function vscode_config()
 			["@tag"] = { fg = colors.vscBlue, bg = "NONE" },
 			["@tag.javascript"] = { fg = colors.vscBlueGreen, bg = "NONE" },
 			["@tag.typescript"] = { fg = colors.vscBlueGreen, bg = "NONE" },
+			["@tag.builtin.tsx"] = { fg = colors.vscBlue, bg = "NONE" },
 
 			-- `obj.value`
 			["@lsp.type.namespace.typescriptreact"] = { fg = colors.vscBlueGreen, bg = "NONE" },
 
 			-- `function`
 			["@keyword.function.typescript"] = { fg = colors.vscBlue, bg = "NONE" },
+			["@keyword.function.tsx"] = { fg = colors.vscBlue, bg = "NONE" },
 
 			-- `namespace` `interface`
 			["@keyword.type.typescript"] = { fg = colors.vscBlue, bg = "NONE" },
+			["@keyword.type.tsx"] = { fg = colors.vscBlue, bg = "NONE" },
 
 			-- `async funcion`
 			["@keyword.coroutine.typescript"] = { fg = colors.vscBlue, bg = "NONE" },
+			["@keyword.coroutine.tsx"] = { fg = colors.vscBlue, bg = "NONE" },
 
 			-- `? :` ternary operator
 			["keyword.conditional.ternary.typescript"] = { fg = "#777777", bg = "NONE" },
+			["keyword.conditional.ternary.tsx"] = { fg = "#777777", bg = "NONE" },
 		},
 	})
 	vscode.load()

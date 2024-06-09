@@ -133,3 +133,15 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move the selected lines u
 
 -- inspect
 vim.keymap.set("n", "<leader>ii", "<cmd>Inspect<CR>")
+
+-- rename
+vim.keymap.set("n", "<leader>cr", '<cmd>lua require("renamer").rename()<CR>', { desc = "[R]ename the current symbol" })
+vim.keymap.set("n", "<F2>", '<cmd>lua require("renamer").rename()<CR>', { desc = "[R]ename the current symbol" })
+
+-- close all buffers except the current one
+vim.keymap.set(
+	"n",
+	"<leader>bo",
+	":w <bar> %bd <bar> e# <bar> bd# <CR>",
+	{ desc = "Close [O]ther buffers expect current" }
+)
