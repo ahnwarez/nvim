@@ -145,3 +145,7 @@ vim.keymap.set(
 	":w <bar> %bd <bar> e# <bar> bd# <CR>",
 	{ desc = "Close [O]ther buffers expect current" }
 )
+
+-- enable/dispable copilot
+vim.keymap.set("n", "<leader>cp", "<cmd>:Copilot disable<CR>", { desc = "Dispable Copilot" })
+vim.keymap.set("n", "<leader>cP", "<cmd>:Copilot enable<CR>", { desc = "Enable Copilot" })
