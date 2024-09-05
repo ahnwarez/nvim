@@ -12,7 +12,6 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"tsserver",
-					"gopls",
 					"tailwindcss",
 					"clang",
 					"remark_ls", -- markdown
