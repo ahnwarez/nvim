@@ -30,6 +30,7 @@ return {
 			lspconfig.tailwindcss.setup({})
 			lspconfig.remark_ls.setup({})
 			lspconfig.html.setup({})
+			lspconfig.clangd.setup({})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
 			vim.keymap.set("n", "<leader>de", vim.diagnostic.open_float, { desc = "Open Diagnostic" })
