@@ -11,7 +11,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "tsserver",
+          "ts_ls",
           "tailwindcss",
           "remark_ls", -- markdown
           "html",
@@ -25,12 +25,11 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
-      lspconfig.tsserver.setup({})
+      lspconfig.ts_ls.setup({})
       lspconfig.tailwindcss.setup({})
       lspconfig.remark_ls.setup({})
       lspconfig.html.setup({})
       lspconfig.clangd.setup({})
-      lspconfig.csharp_ls.setup({})
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
       vim.keymap.set("n", "<leader>de", vim.diagnostic.open_float, { desc = "Open Diagnostic" })
