@@ -1,5 +1,5 @@
-vim.opt.tabstop = 2 -- number of spaces a tab counts for
-vim.opt.softtabstop = 2 -- number of spaces a tab counts for when editing
+vim.opt.tabstop = 2      -- number of spaces a tab counts for
+vim.opt.softtabstop = 2  -- number of spaces a tab counts for when editing
 vim.opt.expandtab = true -- use spaces instead of tabs
 
 -- enabel auto indenting and set it to spaces
@@ -10,7 +10,7 @@ vim.opt.shiftwidth = 2
 vim.opt.breakindent = true
 
 -- enable relative line numbers
-vim.opt.nu = true -- display line numbers in the gutter
+vim.opt.nu = true  -- display line numbers in the gutter
 vim.opt.rnu = true -- display relative line numbers relative to the current line
 
 -- enable mouse support
@@ -71,6 +71,9 @@ vim.opt.scrolloff = 8
 -- Place a column line
 vim.opt.colorcolumn = "80"
 vim.g.have_nerd_font = true
+
+-- for autosession plugin
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 ---------------------
 -- Keybindings
 ---------------------
@@ -115,11 +118,11 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd("TextYankPost", {
-	desc = "Highlight when yanking (copying) text",
-	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-	callback = function()
-		vim.highlight.on_yank()
-	end,
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
 vim.opt.fillchars = { eob = " " }
 
@@ -140,10 +143,10 @@ vim.keymap.set("n", "<F2>", '<cmd>lua require("renamer").rename()<CR>', { desc =
 
 -- close all buffers except the current one
 vim.keymap.set(
-	"n",
-	"<leader>bo",
-	":w <bar> %bd <bar> e# <bar> bd# <CR>",
-	{ desc = "Close [O]ther buffers expect current" }
+  "n",
+  "<leader>bo",
+  ":w <bar> %bd <bar> e# <bar> bd# <CR>",
+  { desc = "Close [O]ther buffers expect current" }
 )
 
 -- enable/dispable copilot
